@@ -28,4 +28,31 @@
 ![ReflectionSimpleCase](imagePool/ReflectionSimpleCase.png)
 
 
+5. java.lang.Class 类
 
+        - 类的加载过程: java.exe命令对某个字节码文件进行解释运行时， JVM会将编译后的.class文件加载到内存中
+        - Class的实例: 内存中被加载的这些类就是"运行时类"，作为Class的实例
+        - 获取运行时类的 4种 方式: 
+![getRuntimeClassInstance](imagePool/getRuntimeClassInstance.png)
+
+
+6. 哪些类型可以有Class对象
+
+        - 外部类，成员内部类，静态内部类，局部内部类，匿名内部类
+        - interface 接口
+        - []: 数组
+        - enum: 枚举
+        - annotation: 注解
+        - primitive type: 基本数据类型
+        - void
+        - Object
+        - Class 
+
+
+7. 反射的使用场景
+
+        - a.创建运行时类的对象 (eg: 框架中大量使用反射，容器通过反射创建JavaBean, 子类继承父类时保证调用super()时，父类有此无参构造器)
+![createRuntimeClassObject](imagePool/createRuntimeClassObject.png)
+
+           动态性的体现
+![dynamicReflection](imagePool/dynamicReflection.png)
