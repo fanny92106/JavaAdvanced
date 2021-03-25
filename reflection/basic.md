@@ -111,3 +111,21 @@
        - h(*****).获取运行时类的注解 (框架)
             - clazz.getAnnotations()
 ![getRuntimeClassAnnotations](imagePool/getRuntimeClassAnnotations.png)
+    
+    
+       - i(****).操作运行时类的属性
+            - clazz.getDeclaredField("")
+            - field.setAccessible(true)
+            - field.set(newInstance, "val")
+            - field.get(newInstance)
+![getSetRuntimeClassObjectProperties](imagePool/getSetRuntimeClassObjectProperties.png)
+
+    
+       - j(****).操作运行时类的方法(静态 或 非静态)
+            - clazz.getDeclaredMethod("")
+            - method.setAccessible(true)
+            - method.invoke(newInstance, param..)
+            - staticMethod.invoke(Person.class, param..)
+
+![invokeRuntimeClassNonStaticMethod](imagePool/invokeRuntimeClassNonStaticMethod.png)
+![invokeRuntimeClassStaticMethod](imagePool/invokeRuntimeClassStaticMethod.png)
