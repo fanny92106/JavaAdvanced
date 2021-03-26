@@ -8,4 +8,10 @@
 ![staticProxyUseCase](imagePool/staticProxyUseCase.png)
 
 
-2. 
+2. 动态代理: 
+
+        - 由代理工厂在运行时动态地生产代理类实例
+        - Proxy.newInstance(classLoader, interfaces, invokeHandler)
+![proxyClientClass](imagePool/proxyClientClass.png)
+![proxyFactoryCreateProxyObjAtRuntime](imagePool/proxyFactoryCreateProxyObjAtRuntime.png)
+![proxyTest](imagePool/proxyTest.png)
