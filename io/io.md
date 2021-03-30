@@ -29,6 +29,13 @@
 
 
 3. FileReader & FileWriter 
+    
+        0. 读/写文本型文件
+            - .txt
+            - .java
+            - .c
+            - .cpp
+            ...
 
         1. 读的过程
             - 创建File对象
@@ -48,3 +55,22 @@
                 因此当获取数据中读取的元素时(eg: 写流操作), 需要指定读到哪里为止, 尤其是最后一次
             - 写流的时候, 如果写成文件不存在, 则会创建一个; 如果存在, 可以指定FileWriter的append参数为true或false; true: 即在目标文件中append新内容; false: 即覆盖掉目标文件之前的内容
             
+
+4. FileInputStream & FileOutputStream 
+
+        0. 读/写非文本型文件
+            - .jpg/.jpg
+            - .png
+            - .mp3
+            - .mp4
+            - .avi
+            - .doc
+            - .ppt
+            ...
+            
+        1. 图片的复制, 使用FileInputStream 和 FileOutputStream
+![FileInputStreamAndFileOutputStream](imagePool/FileInputStreamAndFileOutputStream.png)
+
+
+
+5. 
