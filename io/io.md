@@ -7,6 +7,7 @@
         - 数据的输入/输出操作是以"流(stream)"的方式进行
         - 占位在内存角度判断in/out
 
+
 2. Category
 
         - 按操作数据单位分为: 字节流 (8 bit), 字符流 (16 bit)
@@ -25,3 +26,25 @@
             
        - io流的体系结构
 ![ioSystem](imagePool/ioSystem.png)
+
+
+3. FileReader & FileWriter 
+
+        1. 读的过程
+            - 创建File对象
+            - 创建FileReader流对象
+            - 读操作
+            - 关闭资源
+            
+        2. 写的过程
+            - 创建File对象
+            - 创建FileWriter流对象
+            - 写操作
+            - 关闭资源
+            
+        3. 注意事项:
+            - FileReader(file)中的file对象必须存在磁盘中, 不然会报FileNotFoundException
+            - 读流的时候, 常使用read(char[])的方法来提高读的效率; 该方法返回每次读取字符的个数, 每次读取是通过覆盖数组元素的方式,
+                因此当获取数据中读取的元素时(eg: 写流操作), 需要指定读到哪里为止, 尤其是最后一次
+            - 写流的时候, 如果写成文件不存在, 则会创建一个; 如果存在, 可以指定FileWriter的append参数为true或false; true: 即在目标文件中append新内容; false: 即覆盖掉目标文件之前的内容
+            
