@@ -73,4 +73,16 @@
 
 
 
-5. 
+5. BufferedReader & BufferedWriter & BufferedInputStream & BufferedOutputStream
+
+        - 提高流的读取和写入的速度
+            原因: 内部提供了一个缓冲区
+        - 作用于已有的流之上(eg: 节点流)
+        - 作为外层流, 在关闭资源时需要先被关闭, 且会自动关闭其内部的流资源
+        - 写流时会自动执行 flush() 方法刷新缓冲区
+![BufferedInputStreamAndBufferedOutputStream](imagePool/BufferedInputStreamAndBufferedOutputStream.png)
+
+       - BufferedReader 还提供了一个 readLine()方法来读取一行文本型数据,
+       但不包含换行符, 输出时需要手动换行
+
+![BufferredFileReaderAndBufferredFileWriter](imagePool/BufferredFileReaderAndBufferredFileWriter.png)
