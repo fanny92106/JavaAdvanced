@@ -104,6 +104,16 @@
 
         - System.in 标准的输入流, 默认从键盘输入, 是字节流, 需要转化成字符流
         - System.out 标准的输出流, 默认从控制台输出
-        
 ![SystemInInputStream](imagePool/SystemInInputStream.png)
         
+
+
+8. <了解即可> PrintStream & PrintWriter 打印流
+
+        - 提供了一系列重载的 print() 和 println()方法
+        - 可以设置打印的位置, 默认是控制台, 也可以设置打印到其他文件中
+![PrintStreamAndPrintWriter](imagePool/PrintStreamAndPrintWriter.png)
+
+
+
+9. 
