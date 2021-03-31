@@ -86,3 +86,18 @@
        但不包含换行符, 输出时需要手动换行
 
 ![BufferredFileReaderAndBufferredFileWriter](imagePool/BufferredFileReaderAndBufferredFileWriter.png)
+
+
+
+6. InputStreamReader & OutputStreamWriter
+
+        - 提供在字节流和字符流之间的转换
+        - InputStreamReader: 将InputStream转换为Reader (解码)
+        - OutputStreamWriter: 将Writer转换为OutputStream (编码)
+![InputStreamReaderAndOutStreamWriterGraph](imagePool/InputStreamReaderAndOutStreamWriterGraph.png)
+
+![InputStreamReaderAndOutStreamWriter](imagePool/InputStreamReaderAndOutStreamWriter.png)
+
+
+7. 
+        
