@@ -56,7 +56,7 @@
             - 写流的时候, 如果写成文件不存在, 则会创建一个; 如果存在, 可以指定FileWriter的append参数为true或false; true: 即在目标文件中append新内容; false: 即覆盖掉目标文件之前的内容
             
 
-4. FileInputStream & FileOutputStream 
+4. FileInputStream & FileOutputStream 节点流
 
         0. 读/写非文本型文件
             - .jpg/.jpg
@@ -73,7 +73,7 @@
 
 
 
-5. BufferedReader & BufferedWriter & BufferedInputStream & BufferedOutputStream
+5. BufferedReader & BufferedWriter & BufferedInputStream & BufferedOutputStream 缓冲流
 
         - 提高流的读取和写入的速度
             原因: 内部提供了一个缓冲区
@@ -89,7 +89,7 @@
 
 
 
-6. InputStreamReader & OutputStreamWriter
+6. InputStreamReader & OutputStreamWriter 转换流
 
         - 提供在字节流和字符流之间的转换
         - InputStreamReader: 将InputStream转换为Reader (解码)
@@ -99,5 +99,11 @@
 ![InputStreamReaderAndOutStreamWriter](imagePool/InputStreamReaderAndOutStreamWriter.png)
 
 
-7. 
+
+7. <了解即可> System.in & System.out 标准的输入/ 输出流
+
+        - System.in 标准的输入流, 默认从键盘输入, 是字节流, 需要转化成字符流
+        - System.out 标准的输出流, 默认从控制台输出
+        
+![SystemInInputStream](imagePool/SystemInInputStream.png)
         
