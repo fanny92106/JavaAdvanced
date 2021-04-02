@@ -36,3 +36,15 @@
 ![StudentDAOExtendsDAOBaseClass](imagePool/StudentDAOExtendsDAOBaseClass.png)
 
 
+
+3. 泛型在继承方面的体现
+
+        - 类A是类B的父类, G<A>和G<B>二者不具备父子类关系, 二者是并列关系
+![List<Object>AndList<String>](imagePool/List<Object>AndList<String>.png)
+
+       - 使用通配符声明公共父类, 但就不能用它来添加数据, 除了null
+![ParentGenericClass](imagePool/ParentGenericClass.png)
+
+       - 有限制条件的通配符?
+            ? extends Person: ?代表的类型是Person类或Person子类
+            ? super Person: ?代表的类型是Person类或Person父类
