@@ -48,3 +48,17 @@
                     - 调用子线程的run()方法
                 b. 不能直接调用run()方法, 相当于没有多线程执行
                 c. start()方法只能start一次, 不能让已经启动执行的子线程再start()子线程
+
+
+3. 线程常用方法
+
+        1). start(): start current thread; call current thread's run() method
+        2). run(): needed to be overwritten in thead class
+        3). currentThread(): static method of Thread class, return current executing thread
+        4). getName(): get current thread's name
+        5). setName(): set current thread's name
+        6). yield(): 释放当前cpu的执行权, 当然有可能在下一刻又被分配给了执行权
+        7). join(): 在线程a中调用线程b的join(), 此时线程a就进入阻塞状态, 直到线程b完全执行完以后, 线程a才结束阻塞状态
+        8). sleep(long milliseconds): 让当前线程睡眠(阻塞)指定的毫秒数, 结束后等待cpu重新分配资源
+        9). stop(): @Deprecated
+        10). isAlive(): 某个线程当下是否存活
