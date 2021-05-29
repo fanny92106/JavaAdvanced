@@ -31,3 +31,20 @@
             a. 需要同时执行两个或多个任务, eg: main线程, gc线程, 异常处理线程
             b. 执行一些需要等待的任务, eg: 用户输入, 文件读写, 网络操作, 搜索等以提高用户体验, case: 用户滑动手机时(thread_1)另一条线程(thread_2)负责装载新的page content
             
+            
+2. 线程的创建
+
+        方式一: 继承Thread类
+            - 创建一个类继承Thread类
+            - 重写Thread类的run()方法, 子线程要做的事就放在这里
+            - 创建这个子类的对象
+            - 子类对象调用start()方法
+            
+![CreateThreadByInheritThreadClass](imagePool/CreateThreadByInheritThreadClass.png)
+
+            注意: 
+                a. start()的作用: 
+                    - 启动子线程
+                    - 调用子线程的run()方法
+                b. 不能直接调用run()方法, 相当于没有多线程执行
+                c. start()方法只能start一次, 不能让已经启动执行的子线程再start()子线程
