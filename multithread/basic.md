@@ -171,3 +171,17 @@
 8. 单例模式懒汉式的线程安全的高效写法: 
 
 ![ThreadSafeSingletonPattern](imagePool/ThreadSafeSingletonPattern.png)
+
+
+9. Dead Lock 死锁
+
+        - 不同的线程分别占用对方需要的同步资源不放弃, 都在等待对方放弃自己需要的同步资源, 就形成了线程的死锁
+        - 出现死锁后, 不会出现异常, 不会出现提示, 只是所有的线程都处于阻塞状态, 无法继续
+        - 我们使用同步时要尽量避免死锁:
+            * 使用专门的算法, 原则
+            * 尽量减少同步资源的定义
+            * 尽量避免嵌套同步
+    
+![Deadlock_1](imagePool/Deadlock_1.png)
+
+![Deadlock_2](imagePool/Deadlock_2.png)
