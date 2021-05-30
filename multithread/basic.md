@@ -48,6 +48,26 @@
                     - 调用子线程的run()方法
                 b. 不能直接调用run()方法, 相当于没有多线程执行
                 c. start()方法只能start一次, 不能让已经启动执行的子线程再start()子线程
+                
+                
+        方式二: 实现Runnable接口
+            - 创建一个实现了Runnable接口的类
+            - 这个类要重写Runnable中的抽象方法: run()
+            - 创建这个类的对象
+            - 将这个对象作为参数传递到Thread类的构造器中, 创建Thread类对象
+            - 通过Thread类对象调用start()
+ 
+ ![CreateThreadByImplementRunnableInterface](imagePool/CreateThreadByImplementRunnableInterface.png)
+ 
+ 
+ 对比创建线程的两种方式:
+ 
+        - 开发中: 优先选择: 实现Runnable接口的方式
+        - 原因: 
+                a. 实现接口的方式没有类的单继承性的局限性
+                b. 实现接口的方式更适合来处理多线程共享数据的情况(天然共享)
+                
+![ShareMemoryDataByPassRunnableObj](imagePool/ShareMemoryDataByPassRunnableObj.png)
 
 
 3. 线程常用方法
