@@ -165,5 +165,9 @@
             
             2). 同步方法处理继承Thread类
 
-![](imagePool/)
+![SynchronizedMethodHandleInheritThreadClass](imagePool/SynchronizedMethodHandleInheritThreadClass.png)
     
+
+8. 单例模式懒汉式的线程安全的高效写法: 
+
+![ThreadSafeSingletonPattern](imagePool/ThreadSafeSingletonPattern.png)
