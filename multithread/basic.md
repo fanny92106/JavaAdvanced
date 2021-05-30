@@ -126,3 +126,44 @@
                 - 当某个线程在操作某个共享变量的过程中, 操作尚未完成时, 其他线程也进入并操作此数据, 导致结果出现异常
         3). 如何解决:
                 - 当某个线程在操作某个共享变量的过程中, 其他线程不能参与进来, 直到本线程操作完变量, 其他线程才可以开始操作变量, 这种情况下, 即使本线程出现了阻塞也不能改变
+
+
+7. 线程的同步
+
+        方式一: 同步代码块
+        
+            synchronized(同步监视器) {
+                需要被同步的代码, 即操作共享数据(堆区, 方法区)的代码 !!!!!!!!!!
+                同步监视器: 俗称, 锁 🔐, 任何一个类的对象都可以充当锁
+                     要求: 多个线程必须共用同一把锁 !!!!!!!!!!!
+            }
+            
+            synchronized的优势:
+                - 解决了线程安全的问题
+            
+            synchronized的劣势:
+                - 操作同步代码时, 只能有一个线程参与, 其他线程等待, 相当于一个单线程的过程, 效率低
+                
+                
+             1). 同步代码块处理实现Runnable接口
+            
+![SynchronizedBlockHandleImplementRunnableInterface](imagePool/SynchronizedBlockHandleImplementRunnableInterface.png)
+            
+            2). 同步代码块处理继承Thread类
+            
+![SynchronizedBlockHandleInheritThreadClass](imagePool/SynchronizedBlockHandleInheritThreadClass.png)
+        
+        方式二: 同步方法
+                - 仍然会涉及到同步监视器, 只是不需要我们显示声明
+                - 非静态的同步方法, 同步监视器是: this
+                - 静态的同步方法, 同步监视器是: 当前类本身
+        
+        
+            1). 同步方法处理实现Runnable接口
+            
+![SynchronizedMethodHandleImplementRunnableInterface](imagePool/SynchronizedMethodHandleImplementRunnableInterface.png)
+            
+            2). 同步方法处理继承Thread类
+
+![](imagePool/)
+    
