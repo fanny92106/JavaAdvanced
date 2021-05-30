@@ -130,7 +130,7 @@
 
 7. 线程的同步
 
-        方式一: 同步代码块
+         方式一: 同步代码块
         
             synchronized(同步监视器) {
                 需要被同步的代码, 即操作共享数据(堆区, 方法区)的代码 !!!!!!!!!!
@@ -167,7 +167,17 @@
 
 ![SynchronizedMethodHandleInheritThreadClass](imagePool/SynchronizedMethodHandleInheritThreadClass.png)
     
-
+    
+        方式三: JDK5.0之后的新特性
+        
+![LockSynchronization](imagePool/LockSynchronization.png)
+    
+        对比synchronized 和 lock:
+            - lock是显式锁(手动开启和关闭锁), synchronized是隐式锁, 出了同步作用域后自动释放
+            - lock只有代码块锁, synchronized有代码块锁和方法锁
+            - 使用lock锁, JVM将花费较少的时间来调度线程, 性能更好, 并且具有更好的扩展性(提供更多的子类)
+    
+    
 8. 单例模式懒汉式的线程安全的高效写法: 
 
 ![ThreadSafeSingletonPattern](imagePool/ThreadSafeSingletonPattern.png)
