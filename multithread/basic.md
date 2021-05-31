@@ -195,3 +195,40 @@
 ![Deadlock_1](imagePool/Deadlock_1.png)
 
 ![Deadlock_2](imagePool/Deadlock_2.png)
+
+
+10.  线程间的通信
+
+![WaitNotify](imagePool/WaitNotify.png)
+
+    1). 三个常用方法：
+            - wait(): 一旦执行此方法, 当前线程就进入阻塞状态, 并释放同步监视器
+            - notify(): 一旦执行此方法, 就会唤醒被wait的线程; 如果有多个线程被wait, 就会唤醒优先级高的那个
+            - notifyAll(): 一旦执行此方法, 就会唤醒所有被wait的线程
+            
+    2). 需求: 
+            - 这三个方法必须使用在同步代码块或同步方法中
+            - 这三个方法的调用者必须是同步代码块或同步方法中的同步监视器, 否则会出现IllegalMonitorStateException异常
+            - 这三个方法定义在java.lang.Object类当中
+
+    3). 对比wait()和sleep():
+            相同点:
+                - 一旦执行wait()或sleep()都会使当前线程进入阻塞状态
+            
+            不同点: *****
+                a. 两个方法声明的位置不同: 
+                    - Thread类中声明sleep()
+                    - Object类中声明wait()
+                b. 调用的范围不同: 
+                    - sleep()可以在任何需要的场景下调用
+                    - wait()必须使用在同步代码块或同步方法中调用
+                c. 关于是否同步监视器: 如果两个方法都使用在同步代码块或同步方法中
+                    - sleep()不会释放锁
+                    - wait()会释放锁
+                
+    4). 经典案例 -- 生产者/消费者问题
+    
+        TBD
+    
+        
+            
