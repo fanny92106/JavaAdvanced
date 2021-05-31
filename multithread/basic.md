@@ -228,7 +228,10 @@
                 
     4). 经典案例 -- 生产者/消费者问题
     
-        TBD
-    
+![ProducerConsumerItem](imagePool/ProducerConsumerItem.png)
+
+![ProducerConsumer](imagePool/ProducerConsumer.png)
+
+![ProducerConsumerMainApp](imagePool/ProducerConsumerMainApp.png)
         
             
