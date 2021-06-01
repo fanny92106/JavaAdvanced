@@ -75,6 +75,19 @@
                 
 ![ShareMemoryDataByPassRunnableObj](imagePool/ShareMemoryDataByPassRunnableObj.png)
 
+        
+        方式三: 实现Callable接口
+                - 可以有返回值
+                - 可以抛出异常, 被外界捕获
+                - 支持Generics
+        
+        
+        方式四: 使用线程池创建线程
+                - 生产中常用
+                - 提高响应速度
+                - 减少资源耗费
+                - 便于线程管理
+
 
 3. 线程常用方法
 
@@ -220,8 +233,8 @@
                     - Thread类中声明sleep()
                     - Object类中声明wait()
                 b. 调用的范围不同: 
-                    - sleep()可以在任何需要的场景下调用
-                    - wait()必须使用在同步代码块或同步方法中调用
+                    - sleep()可以在任何需要的场景下调用, sleep()需等到time完成
+                    - wait()必须使用在同步代码块或同步方法中调用, wait()需被notify()或notifyAll()唤醒
                 c. 关于是否同步监视器: 如果两个方法都使用在同步代码块或同步方法中
                     - sleep()不会释放锁
                     - wait()会释放锁
@@ -235,3 +248,11 @@
 ![ProducerConsumerMainApp](imagePool/ProducerConsumerMainApp.png)
         
             
+11. 关于生命周期
+
+        1). 主要关注两个概念: 状态, 响应的方法
+        2). 关注:
+                - 状态a ---> 状态b: 哪些方法执行了 (回调方法)
+                - 某个方法的调用导致了: 状态a ---> 状态b
+        3). 阻塞: 临时状态, 不可以作为最终状态
+            死亡: 最终状态
