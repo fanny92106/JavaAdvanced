@@ -48,3 +48,39 @@
             
             3) 类 ：： 非静态
                 ...
+
+
+4. Stream API
+        
+        1). 定义:
+                - 函数式编程风格
+                - 它可以对指定的集合进行各种复杂操作, eg: 复杂的查找, 过滤和映射数据等
+                - 类似使用SQL执行的数据库查询, 但实际处理的常是NoSQL数据库的数据源
+                - Stream关注的是对数据的运算, 与CPU打交道; 集合关注的数据存储, 与内存打交道
+        2). 注意点:
+                - Stream自己不会存储数据
+                - Stream不会改变数据源对象, 相反, 他们会返回一个持有结果的新的Stream
+                - Stream操作是延迟执行的, 这意味着他们会等到需要结果的时候才执行; 产生结果后不能再被使用
+        3). Stream执行流程:
+                Stream实例化 ---> 一系列链式中间操作(过滤, 映射 ...) ---> 终止操作
+        
+        4). Stream的执行
+        
+            a. Stream实例化 (四种方式)
+            
+![CreateStreamObj](image/CreateStreamObj.png)
+
+           b. Stream的中间操作 : 多个中间操作可以连接形成一个流水线, 除非流水线上触发终止操作, 否则中间操作不会执行任何处理!!
+                    而终止操作时一次性全部处理, 称为“惰性求值”
+                    
+                - 过滤(filter), 去重(distinct), 截取前#个(limit), 跳过前#个(skip)
+                
+![FilterDistinctSkipLimit](image/FilterDistinctSkipLimit.png)
+        
+                - 映射(map), 扁平映射(flatMap)
+
+![BasicMap](image/BasicMap.png)
+
+![Map&FlatMap](image/Map&FlatMap.png)
+
+                
