@@ -75,24 +75,26 @@
            b. Stream的中间操作 : 多个中间操作可以连接形成一个流水线, 除非流水线上触发终止操作, 否则中间操作不会执行任何处理!!
                     而终止操作时一次性全部处理, 称为“惰性求值”
                     
-                - 过滤(filter), 去重(distinct), 截取前#个(limit), 跳过前#个(skip)
+                - 中间操作: 过滤(filter), 去重(distinct), 截取前#个(limit), 跳过前#个(skip)
                 
 ![FilterDistinctSkipLimit](image/FilterDistinctSkipLimit.png)
         
-                - 映射(map), 扁平映射(flatMap)
+                - 中间操作: 映射(map), 扁平映射(flatMap)
 
 ![BasicMap](image/BasicMap.png)
 
 ![Map&FlatMap](image/Map&FlatMap.png)
 
-                - 排序(sort)
+                - 中间操作: 排序(sort)
                 
 ![Sorted](image/Sorted.png)
                 
-                - 匹配与查找
-                
+                - 终止操作: 匹配与查找(match & search)
 
-                
+![Match&Search1](image/Match&Search1.png)
+
+![Match&Search2](image/Match&Search2.png)
+
                 - 规约
                 
                 - 收集
