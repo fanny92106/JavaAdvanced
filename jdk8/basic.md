@@ -95,6 +95,10 @@
 
 ![Match&Search2](image/Match&Search2.png)
 
-                - 规约
+                - 终止操作: 规约(reduce)
                 
-                - 收集
+![Reduce](image/Reduce.png)
+                
+                - 终止操作: 收集(collect)
+
+![Collect](image/Collect.png)
