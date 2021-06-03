@@ -52,6 +52,8 @@
 
 4. Stream API
         
+        参考: https://zhuanlan.zhihu.com/p/71134330
+        
         1). 定义:
                 - 函数式编程风格
                 - 它可以对指定的集合进行各种复杂操作, eg: 复杂的查找, 过滤和映射数据等
@@ -83,4 +85,14 @@
 
 ![Map&FlatMap](image/Map&FlatMap.png)
 
+                - 排序(sort)
                 
+![Sorted](image/Sorted.png)
+                
+                - 匹配与查找
+                
+
+                
+                - 规约
+                
+                - 收集
